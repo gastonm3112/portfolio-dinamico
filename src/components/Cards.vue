@@ -8,7 +8,7 @@
       <p>
         <strong> {{ autor }} </strong>
       </p>
-      <buttons-url />
+      <buttons-url :url="url" />
       <buttons-url color="red" />
     </div>
   </div>
@@ -22,6 +22,7 @@ export default {
     title: String,
     description: String,
     autor: String,
+    url: String,
   },
 };
 </script>
