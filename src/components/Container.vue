@@ -2,7 +2,7 @@
   <div id="container" class="container">
     <h2>Proyectos</h2>
     <hr />
-    <div class="cards">
+    <div class="cards" v-for="project in projects" :key="project.id">
       <Cards />
     </div>
   </div>
@@ -11,16 +11,22 @@
 <script>
 import Cards from "./Cards.vue";
 export default {
+  data() {
+    return {
+      projects: null,
+    };
+  },
   components: { Cards },
   mounted() {
     this.getProjects();
   },
   methods: {
     async getProjects() {
-      const res = await fetch("https://api.github.com/users/gastonm3112");
+      const res = await fetch("https://api.github.com/users/gastonm3112/repos");
 
       const data = await res.json();
-
+      // Tomando información de mis proyectos
+      this.projects = data;
       console.log(data);
     },
   },
