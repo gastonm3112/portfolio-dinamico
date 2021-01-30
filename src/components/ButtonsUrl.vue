@@ -1,5 +1,7 @@
 <template>
-  <a href="https://google.com" target="_blank" :class="setColor">Google</a>
+  <a href="https://google.com" target="_blank" :class="setColor" class="mb-2"
+    >Google</a
+  >
 </template>
 
 <script>

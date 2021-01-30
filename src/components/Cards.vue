@@ -9,6 +9,7 @@
         <strong> {{ autor }} </strong>
       </p>
       <buttons-url />
+      <buttons-url color="red" />
     </div>
   </div>
 </template>
