@@ -1,7 +1,7 @@
 <template>
   <div id="cards">
     <div class="cards p-2">
-      <h3>Nombre Proyecto</h3>
+      <h3>{{ title }}</h3>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam, saepe.
       </p>
@@ -11,7 +11,11 @@
 </template>
 
 <script>
-export default {};
+export default {
+  props: {
+    title: String,
+  },
+};
 </script>
 
 <style scoped>

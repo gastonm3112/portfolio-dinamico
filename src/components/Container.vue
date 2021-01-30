@@ -2,7 +2,7 @@
   <div id="container" class="container mt-5">
     <!-- <h2>Proyectos</h2> -->
     <div class="cards" v-for="project in projects" :key="project.id">
-      <Cards />
+      <Cards :title="project.name" />
     </div>
   </div>
 </template>
