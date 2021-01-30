@@ -8,12 +8,15 @@
       <p>
         <strong> {{ autor }} </strong>
       </p>
+      <buttons-url />
     </div>
   </div>
 </template>
 
 <script>
+import ButtonsUrl from "./ButtonsUrl";
 export default {
+  components: { ButtonsUrl },
   props: {
     title: String,
     description: String,
