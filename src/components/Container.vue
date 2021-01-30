@@ -1,15 +1,17 @@
 <template>
-  <div id="container" class="container mt-5">
-    <!-- <h2>Proyectos</h2> -->
-    <Loading v-if="loading" />
-    <div class="cards" v-for="project in projects" :key="project.id">
-      <Cards
-        :title="project.name"
-        :description="project.description"
-        :autor="project.owner.login"
-        :url="project.html_url"
-        :homepage="project.homepage"
-      />
+  <div id="cards_section">
+    <h2>Proyectos</h2>
+    <div class="container mt-5">
+      <Loading v-if="loading" />
+      <div class="cards" v-for="project in projects" :key="project.id">
+        <Cards
+          :title="project.name"
+          :description="project.description"
+          :autor="project.owner.login"
+          :url="project.html_url"
+          :homepage="project.homepage"
+        />
+      </div>
     </div>
   </div>
 </template>
@@ -44,6 +46,10 @@ export default {
 </script>
 
 <style scoped>
+#cards_section {
+  text-align: center;
+  margin-top: 1em;
+}
 .container {
   display: flex;
   flex-wrap: wrap;
