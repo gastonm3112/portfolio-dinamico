@@ -7,6 +7,7 @@
         :description="project.description"
         :autor="project.owner.login"
         :url="project.html_url"
+        :homepage="project.homepage"
       />
     </div>
   </div>

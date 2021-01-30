@@ -9,7 +9,7 @@
         <strong> {{ autor }} </strong>
       </p>
       <buttons-url :url="url" />
-      <buttons-url color="red" />
+      <buttons-url color="red" :url="homepage" v-if="homepage != null" />
     </div>
   </div>
 </template>
@@ -23,6 +23,7 @@ export default {
     description: String,
     autor: String,
     url: String,
+    homepage: String,
   },
 };
 </script>
