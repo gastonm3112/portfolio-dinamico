@@ -28,6 +28,11 @@ export default {
 </script>
 
 <style scoped>
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 .container {
   overflow: hidden;
   border: 1px solid #eee;
