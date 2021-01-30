@@ -9,7 +9,12 @@
         <strong> {{ autor }} </strong>
       </p>
       <buttons-url :url="url" />
-      <buttons-url color="red" :url="homepage" v-if="homepage != null" />
+      <buttons-url
+        color="red"
+        :url="homepage"
+        v-if="homepage != null"
+        title="Deploy"
+      />
     </div>
   </div>
 </template>
