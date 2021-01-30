@@ -1,7 +1,6 @@
 <template>
-  <div id="container" class="container">
-    <h2>Proyectos</h2>
-    <hr />
+  <div id="container" class="container mt-5">
+    <!-- <h2>Proyectos</h2> -->
     <div class="cards" v-for="project in projects" :key="project.id">
       <Cards />
     </div>
@@ -34,12 +33,10 @@ export default {
 </script>
 
 <style scoped>
-.cards {
+.container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-}
-.container {
   overflow: hidden;
   border: 1px solid #eee;
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
