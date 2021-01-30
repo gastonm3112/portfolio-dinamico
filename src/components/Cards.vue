@@ -5,7 +5,9 @@
       <p>
         {{ description }}
       </p>
-      <p><strong>Autor Proyecto</strong></p>
+      <p>
+        <strong> {{ autor }} </strong>
+      </p>
     </div>
   </div>
 </template>
@@ -15,6 +17,7 @@ export default {
   props: {
     title: String,
     description: String,
+    autor: String,
   },
 };
 </script>
