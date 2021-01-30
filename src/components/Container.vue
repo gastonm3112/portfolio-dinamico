@@ -1,6 +1,7 @@
 <template>
   <div id="container" class="container mt-5">
     <!-- <h2>Proyectos</h2> -->
+    <Loading />
     <div class="cards" v-for="project in projects" :key="project.id">
       <Cards
         :title="project.name"
@@ -15,13 +16,14 @@
 
 <script>
 import Cards from "./Cards.vue";
+import Loading from "./Loading.vue";
 export default {
   data() {
     return {
       projects: null,
     };
   },
-  components: { Cards },
+  components: { Cards, Loading },
   mounted() {
     this.getProjects();
   },
