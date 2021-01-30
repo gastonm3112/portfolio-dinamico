@@ -3,16 +3,20 @@
     <Header />
 
     <Container />
+
+    <Footer />
   </div>
 </template>
 
 <script>
 import Container from "./components/Container";
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 export default {
   components: {
     Header,
     Container,
+    Footer,
   },
 };
 </script>

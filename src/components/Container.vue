@@ -1,6 +1,11 @@
 <template>
   <div id="cards_section">
     <h2>Proyectos</h2>
+    <img
+      src="https://avatars.githubusercontent.com/u/67984878?v=4"
+      alt="Avatar de Gastón Martinez"
+      class="avatar_img"
+    />
     <div class="container mt-5">
       <Loading v-if="loading" />
       <div class="cards" v-for="project in projects" :key="project.id">
@@ -46,6 +51,11 @@ export default {
 </script>
 
 <style scoped>
+.avatar_img {
+  width: 120px;
+  border-radius: 50%;
+  margin-top: 1em;
+}
 #cards_section {
   text-align: center;
   margin-top: 1em;
