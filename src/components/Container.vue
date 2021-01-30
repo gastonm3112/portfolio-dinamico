@@ -1,6 +1,7 @@
 <template>
   <div id="container" class="container mt-5">
     <!-- <h2>Proyectos</h2> -->
+    <Loading v-if="loading" />
     <div class="cards" v-for="project in projects" :key="project.id">
       <Cards
         :title="project.name"
@@ -15,23 +16,27 @@
 
 <script>
 import Cards from "./Cards.vue";
+import Loading from "./Loading.vue";
 export default {
   data() {
     return {
       projects: null,
+      loading: false,
     };
   },
-  components: { Cards },
+  components: { Cards, Loading },
   mounted() {
     this.getProjects();
   },
   methods: {
     async getProjects() {
+      this.loading = true;
       const res = await fetch("https://api.github.com/users/gastonm3112/repos");
 
       const data = await res.json();
       // Tomando información de mis proyectos
       this.projects = data;
+      this.loading = false;
       console.log(data);
     },
   },
