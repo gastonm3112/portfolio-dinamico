@@ -3,7 +3,7 @@
     <div class="cards p-2">
       <h3>{{ title }}</h3>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam, saepe.
+        {{ description }}
       </p>
       <p><strong>Autor Proyecto</strong></p>
     </div>
@@ -14,6 +14,7 @@
 export default {
   props: {
     title: String,
+    description: String,
   },
 };
 </script>
