@@ -6,7 +6,20 @@
 </template>
 
 <script>
-export default {};
+export default {
+  mounted() {
+    this.getProjects();
+  },
+  methods: {
+    async getProjects() {
+      const res = await fetch("https://api.github.com/users/gastonm3112");
+
+      const data = await res.json();
+
+      console.log(data);
+    },
+  },
+};
 </script>
 
 <style scoped>
