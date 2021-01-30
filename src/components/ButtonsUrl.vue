@@ -1,9 +1,22 @@
 <template>
-  <a href="https://google.com" target="_blank">Google</a>
+  <a href="https://google.com" target="_blank" :class="setColor">Google</a>
 </template>
 
 <script>
-export default {};
+export default {
+  props: {
+    color: String,
+  },
+  computed: {
+    setColor() {
+      return this.color === "red" ? "btn btn-danger" : "btn btn-dark";
+    },
+  },
+};
 </script>
 
-<style></style>
+<style scoped>
+a {
+  width: 100%;
+}
+</style>
