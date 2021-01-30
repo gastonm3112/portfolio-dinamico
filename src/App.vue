@@ -1,7 +1,9 @@
 <template>
-  <Header />
+  <div id="app">
+    <Header />
 
-  <Container />
+    <Container />
+  </div>
 </template>
 
 <script>

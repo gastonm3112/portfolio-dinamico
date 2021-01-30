@@ -1,6 +1,7 @@
 <template>
   <div id="container" class="container">
     <h2>Proyectos</h2>
+    <hr />
   </div>
 </template>
 
