@@ -1,12 +1,16 @@
 <template>
   <Header />
+
+  <Container />
 </template>
 
 <script>
+import Container from "./components/Container";
 import Header from "./components/Header";
 export default {
   components: {
     Header,
+    Container,
   },
 };
 </script>
