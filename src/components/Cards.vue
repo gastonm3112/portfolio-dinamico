@@ -1,6 +1,6 @@
 <template>
   <div id="cards">
-    <div class="cards p-2">
+    <div class="cards p-3">
       <h3>{{ title }}</h3>
       <p>
         {{ description }}
@@ -35,7 +35,7 @@ export default {
 
 <style scoped>
 .cards {
-  width: 250px;
+  width: 300px;
   margin: 7px;
   border: 1px solid #eee;
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
